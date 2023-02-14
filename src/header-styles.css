@@ -1,0 +1,137 @@
+#header {
+  min-width: 100%;
+  max-width: 1200px;
+  background: whitesmoke;
+  color: black;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 5rem;
+}
+
+#header > div > h1,
+#header > div > h2 {
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#header > div > h1 {
+  color: rgba(77, 74, 74, 0.9);
+}
+
+#header > div > h2 {
+  width: fit-content;
+  background: linear-gradient(
+    90deg,
+    darkgrey 0%,
+    rgb(18, 20, 156) 67%,
+    rgba(9, 9, 121, 1) 100%
+  );
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+}
+
+#contact-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+#contact-list > li > a {
+  display: flex;
+  justify-content: left;
+  gap: 0.4rem;
+  align-items: center;
+  color: darkgray;
+  padding: 0.1rem;
+  transition: all 0.5s ease-out;
+  text-transform: capitalize;
+}
+
+#contact-list > li:hover > a {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#contact-list > li:hover > #email {
+  color: var(--email-color);
+}
+
+#contact-list > li:hover > #cv {
+  color: var(--cv-color);
+}
+
+#contact-list > li:hover > #linkedin {
+  color: var(--linkedin-color);
+}
+
+@media (max-width: 600px) {
+  #header {
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 0;
+  }
+
+  #header > div {
+    width: 100%;
+  }
+
+  #header > div > h1 {
+    font-size: 1.8rem;
+  }
+
+  #header > div > h2 {
+    font-size: 1.2rem;
+  }
+
+  #contact-list {
+    height: 0;
+    opacity: 0;
+    transition: height 0s;
+  }
+
+  #slider-controller {
+    display: flex;
+    width: 100%;
+    transition: all 1s ease-out;
+    padding: 0.5rem 0;
+  }
+
+  #slider-controller > label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 90%;
+  }
+
+  #slider-controller > label > svg {
+    rotate: 180deg;
+    width: fit-content;
+    transition: rotate 0.5s ease-out;
+  }
+
+  #slider-controller > input {
+    position: absolute;
+    opacity: 0;
+    width: 83%;
+    height: 24px;
+  }
+
+  #slider-controller:has(> input:checked) > label > svg {
+    rotate: 0deg;
+  }
+
+  #slider-controller:has(> input:checked) + #contact-list {
+    transition: all 1s ease-in;
+    opacity: 1;
+    height: fit-content;
+  }
+}
