@@ -47,3 +47,14 @@ body {
 .main {
   width: 100%;
 }
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+}
+
+.showInterception {
+  opacity: 1;
+  filter: blur(0);
+}

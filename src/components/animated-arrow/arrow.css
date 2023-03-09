@@ -1,0 +1,77 @@
+.arrow-item {
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.arrow-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(180deg);
+  position: relative;
+  height: 5rem;
+  width: fit-content;
+}
+
+.showInterception > .arrow-cover {
+  -webkit-animation: arrowSlide 2s ease-in-out infinite;
+  -moz-animation: arrowSlide 2s ease-in-out infinite;
+  animation: arrowSlide 2s ease-in-out infinite;
+}
+
+.arrow-shape {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-top: 5px solid whitesmoke;
+  border-left: 5px solid whitesmoke;
+  transform: rotate(45deg);
+}
+
+.arrow-2 {
+  top: 2rem;
+}
+
+.arrow-3 {
+  top: 4rem;
+}
+
+@-webkit-keyframes arrowSlide {
+  0% {
+    top: 10%;
+  }
+
+  50% {
+    top: 30%;
+  }
+  100% {
+    top: 10%;
+  }
+}
+@-moz-keyframes arrowSlide {
+  0% {
+    top: 10%;
+  }
+
+  50% {
+    top: 30%;
+  }
+  100% {
+    top: 10%;
+  }
+}
+@keyframes arrowSlide {
+  0% {
+    top: 10%;
+  }
+
+  50% {
+    top: 30%;
+  }
+  100% {
+    top: 10%;
+  }
+}

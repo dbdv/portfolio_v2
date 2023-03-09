@@ -4,14 +4,20 @@
   padding: 1rem 0.7rem;
 }
 
-.exp-img {
+#exp-aside {
   display: none;
+}
+
+.exp-cover > div {
+  width: 100%;
 }
 
 .exp-title-div {
   display: flex;
   align-items: center;
   position: relative;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .exp-title {
@@ -24,47 +30,49 @@
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
-  position: absolute;
-  right: 0%;
   transition: all 1s ease-in-out;
-  -webkit-animation: slide 2s ease-in-out infinite;
-  -moz-animation: slide 2s ease-in-out infinite;
-  animation: slide 6s ease-in-out alternate;
 }
 
-@-webkit-keyframes slide {
+.showInterception > div > .exp-title-div > .js-img-mobile {
+  -webkit-animation: jsJump 5s ease-in-out infinite;
+  -moz-animation: jsJump 5s ease-in-out infinite;
+  animation: jsJump 2.3s ease-in-out alternate-reverse;
+}
+
+@-webkit-keyframes jsJump {
   0% {
-    right: 0%;
   }
 
   50% {
-    right: 30%;
+    transform: rotate(180deg);
   }
   100% {
-    right: 0%;
+    transform: rotate(360deg);
   }
 }
-@-moz-keyframes slide {
+@-moz-keyframes jsJump {
   0% {
-    right: 0%;
   }
 
   50% {
-    right: 30%;
+    transform: rotate(180deg);
   }
   100% {
-    right: 0%;
+    transform: rotate(360deg);
   }
 }
-@keyframes slide {
+@keyframes jsJump {
   0% {
-    right: 0%;
   }
 
   50% {
-    right: 30%;
+    transform: rotate(180deg);
   }
   100% {
-    right: 0%;
+    transform: rotate(360deg);
   }
+}
+
+.exp-ul {
+  list-style: none;
 }

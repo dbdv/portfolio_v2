@@ -6,7 +6,7 @@ type props = {
 
 export default function AboutSection({ data }: props) {
   return (
-    <section role="sobre mí" className="padding cover">
+    <section role="sobre mí" className="hidden padding cover">
       <div className="p-div">
         <div>
           <h2 className="about-title">Sobre mí</h2>
