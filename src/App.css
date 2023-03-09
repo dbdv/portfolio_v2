@@ -1,14 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 :root {
   --linkedin-color: #0a66c2;
   --email-color: #cd0404;
   --cv-color: black;
+  --cv-color: black;
+  --dark-blue: #023047;
+  --sky-blue: #8ecae6;
+  --sky-blue-darker: #219ebc;
+  --bone: #f1faee;
+  --soft-gray: #3c3c3c;
+  --js-color: #fdd500;
 }
 
 #root {
@@ -25,25 +34,16 @@ body {
 
 .App {
   width: 100%;
-  min-height: 100vh;
-  max-width: 1200px;
+  min-height: 100svh;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
 }
 
 .padding {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-.read-the-docs {
-  color: #888;
+.main {
+  width: 100%;
 }

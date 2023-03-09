@@ -1,0 +1,343 @@
+#header {
+  background: #f5f5f5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  color: var(--dark-blue);
+  position: relative;
+}
+
+#header > div:first-child {
+  text-align: left;
+  padding: 1rem;
+}
+
+#header > div:nth-child(2) {
+  margin-bottom: 1rem;
+  position: sticky;
+}
+
+#header > div:first-child > h1 {
+  font-size: 2.1rem;
+  text-transform: uppercase;
+}
+
+#header > div:first-child > h2 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  position: relative;
+  width: fit-content;
+}
+
+#header > div:first-child > h2::after {
+  position: absolute;
+  content: "";
+  background-color: var(--dark-blue);
+  width: 0%;
+  height: 1px;
+  bottom: 0%;
+  left: 0%;
+  -webkit-animation: showBorderSubtitle 3s ease-in-out forwards;
+  -moz-animation: showBorderSubtitle 3s ease-in-out forwards;
+  animation: showBorderSubtitle 3s ease-in-out forwards;
+}
+
+@-webkit-keyframes showBorderSubtitle {
+  100% {
+    left: 0%;
+    width: 100%;
+  }
+}
+@-moz-keyframes showBorderSubtitle {
+  100% {
+    left: 0%;
+    width: 100%;
+  }
+}
+@keyframes showBorderSubtitle {
+  100% {
+    left: 0%;
+    width: 100%;
+  }
+}
+
+#header > div:nth-child(2) > span {
+  flex: 1;
+  text-align: center;
+}
+
+#contact-list {
+  height: 0;
+  opacity: 0;
+  transition: height 0s;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0 1rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-transform: capitalize;
+}
+
+#email {
+  color: var(--email-color);
+}
+
+#cv {
+  color: var(--dark-blue);
+}
+
+#linkedin {
+  color: var(--linkedin-color);
+}
+
+#slider-controller {
+  display: flex;
+  width: 100%;
+  transition: all 1s ease-out;
+  padding: 0.5rem 0;
+}
+
+#slider-controller > label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 90%;
+}
+
+#slider-controller > label > svg {
+  rotate: 180deg;
+  width: fit-content;
+  transition: rotate 0.5s ease-out;
+}
+
+#slider-controller > input {
+  position: absolute;
+  opacity: 0;
+  width: 83%;
+  height: 24px;
+}
+
+.slider-icon-on {
+  rotate: 0deg !important;
+}
+
+.contact-list-show {
+  transition: all 1s ease-in !important;
+  opacity: 1 !important;
+  height: fit-content !important;
+}
+
+@media (min-width: 450px) {
+  #header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #header > div:first-child {
+    padding-right: 0;
+  }
+  #contact-list {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    padding-left: 0;
+  }
+
+  #contact-list > li > a > span {
+    width: fit-content;
+    position: relative;
+  }
+
+  #contact-list > li > a > span::after {
+    content: "";
+    width: 0%;
+    left: 4%;
+    height: 2px;
+    position: absolute;
+    bottom: 10%;
+    -webkit-animation: showBorder 3s ease-in-out alternate;
+    -moz-animation: showBorder 3s ease-in-out alternate;
+    animation: showBorder 3s ease-in-out alternate;
+    background-color: darkgray;
+  }
+
+  #contact-list > li > #linkedin > span::after {
+    animation-delay: 3s;
+  }
+  #contact-list > li > #cv > span::after {
+    animation-delay: 6s;
+  }
+  #contact-list > li > #email > span::after {
+    animation-delay: 9s;
+  }
+
+  @-webkit-keyframes showBorder {
+    100% {
+      left: 4%;
+      width: 96%;
+    }
+  }
+  @-moz-keyframes showBorder {
+    100% {
+      left: 4%;
+      width: 96%;
+    }
+  }
+  @keyframes showBorder {
+    100% {
+      left: 4%;
+      width: 96%;
+    }
+  }
+
+  #contact-list > li > #email > span::after {
+    background-color: var(--email-color);
+  }
+
+  #contact-list > li:hover > #email {
+    color: var(--email-color);
+  }
+
+  #contact-list > li > #cv > span::after {
+    background-color: var(--cv-color);
+  }
+
+  #contact-list > li:hover > #cv {
+    color: var(--cv-color);
+  }
+
+  #contact-list > li > #linkedin > span::after {
+    background-color: var(--linkedin-color);
+  }
+
+  #contact-list > li:hover > #linkedin {
+    color: var(--linkedin-color);
+  }
+}
+
+@media (min-width: 1168px) {
+  #header {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  #header > div:first-child {
+    padding-left: 1rem;
+  }
+
+  #header > div:nth-child(2) {
+    display: flex;
+    background: none;
+    justify-content: flex-end;
+    padding-right: 1rem;
+  }
+
+  #header > div > h1,
+  #header > div > h2 {
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  #header > div:first-child > h1 {
+    font-size: 2rem;
+  }
+
+  #contact-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  #contact-list > li > a {
+    display: flex;
+    justify-content: left;
+    gap: 0.4rem;
+    align-items: center;
+    /* color: darkgray; */
+    padding: 0.1rem;
+    transition: all 0.5s ease-out;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    width: fit-content;
+  }
+
+  #contact-list > li:hover > a {
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  #contact-list > li > a > span {
+    width: fit-content;
+    position: relative;
+  }
+
+  /*  #contact-list > li > a > span::after {
+    content: "";
+    width: 0%;
+    left: 4%;
+    height: 2px;
+    position: absolute;
+    bottom: 15%;
+    -webkit-animation: showBorder 3s ease-in-out infinite;
+    -moz-animation: showBorder 3s ease-in-out infinite;
+    animation: showBorder 3s ease-in-out infinite;
+    background-color: darkgray;
+  }
+
+  @-webkit-keyframes showBorder {
+    100% {
+      left: 4%;
+      width: 96%;
+    }
+  }
+  @-moz-keyframes showBorder {
+    100% {
+      left: 4%;
+      width: 96%;
+    }
+  }
+  @keyframes showBorder {
+    100% {
+      left: 4%;
+      width: 96%;
+    }
+  }
+
+  #contact-list > li > #email:hover > span::after {
+    background-color: var(--email-color);
+  }
+
+  #contact-list > li:hover > #email {
+    color: var(--email-color);
+  }
+
+  #contact-list > li > #cv:hover > span::after {
+    background-color: var(--cv-color);
+  }
+
+  #contact-list > li:hover > #cv {
+    color: var(--cv-color);
+  }
+
+  #contact-list > li > #linkedin:hover > span::after {
+    background-color: var(--linkedin-color);
+  }
+
+  #contact-list > li:hover > #linkedin {
+    color: var(--linkedin-color);
+  } */
+}

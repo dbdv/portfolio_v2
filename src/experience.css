@@ -1,0 +1,70 @@
+.exp-cover {
+  display: flex;
+  background: var(--soft-gray);
+  padding: 1rem 0.7rem;
+}
+
+.exp-img {
+  display: none;
+}
+
+.exp-title-div {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.exp-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--js-color);
+}
+
+.js-img-mobile {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  position: absolute;
+  right: 0%;
+  transition: all 1s ease-in-out;
+  -webkit-animation: slide 2s ease-in-out infinite;
+  -moz-animation: slide 2s ease-in-out infinite;
+  animation: slide 6s ease-in-out alternate;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    right: 0%;
+  }
+
+  50% {
+    right: 30%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+@-moz-keyframes slide {
+  0% {
+    right: 0%;
+  }
+
+  50% {
+    right: 30%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+@keyframes slide {
+  0% {
+    right: 0%;
+  }
+
+  50% {
+    right: 30%;
+  }
+  100% {
+    right: 0%;
+  }
+}

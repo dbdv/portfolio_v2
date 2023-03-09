@@ -1,22 +1,16 @@
 import "./App.css";
-import "./header-styles.css";
-import data from "./data.json" /* assert { type: "json" } */;
-import {
-  IoMdMailUnread as MailICon,
-  IoLogoLinkedin as LinkedinIcon,
-  IoIosContact as CvICon,
-  IoIosArrowUp as SliderIcon,
-} from "react-icons/io";
+import "./experience.css";
+import Header from "./components/header/Header";
+import AboutSection from "./components/about/About";
+import { data } from "./data";
 
 function App() {
-  console.log(data, typeof data);
   return (
     <div className="App">
       <Header />
-      <main className="padding">
-        <section role="sobre mí">
-          <p></p>
-        </section>
+      <main className="main">
+        <AboutSection data={data.about} />
+        <ExperienceSection />
         <section role="mi stack">Stack</section>
         <section role="proyectos">Projects</section>
       </main>
@@ -24,46 +18,24 @@ function App() {
   );
 }
 
-function Header() {
+function ExperienceSection() {
   return (
-    <header id="header" role="name-job title" className="padding">
+    <section role="experiencia" className="exp-cover">
       <div>
-        <h1>Daniel Bustillos</h1>
-        <h2>Fullstack developer</h2>
-      </div>
-      <div>
-        <div id="slider-controller">
-          <label htmlFor="">
-            Contáctame <SliderIcon />
-          </label>
-          <input type="checkbox" />
+        <div className="exp-title-div">
+          <h2 className="exp-title">Experiencia</h2>
+          <img className="js-img-mobile" src="javascript-icon-96.png" />
         </div>
-        <ul role="contacto" id="contact-list">
-          <li role="linkedin">
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/daniel-alejandro-bustillos/"
-              id="linkedin"
-            >
-              <LinkedinIcon />
-              LinkedIn
-            </a>
-          </li>
-          <li role="cv">
-            <a download={true} href="/Daniel_Bustillos_CV.pdf" id="cv">
-              <CvICon />
-              curriculum
-            </a>
-          </li>
-          <li role="email">
-            <a href="mailto:bustillosdaniel4@gmail.com" id="email">
-              <MailICon />
-              email
-            </a>
-          </li>
+        <ul className="exp-ul">
+          {data.experience.map((exp) => {
+            return <li className="exp-item">{JSON.stringify(exp)}</li>;
+          })}
         </ul>
       </div>
-    </header>
+      <aside>
+        <img className="exp-img" src="developer-2.png" />
+      </aside>
+    </section>
   );
 }
 
