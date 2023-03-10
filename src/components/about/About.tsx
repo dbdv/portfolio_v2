@@ -17,7 +17,7 @@ export default function AboutSection({ data }: props) {
         ))}
       </div>
       <aside id="about-decoration">
-        <img className="react-img" src="react-icon-480.png" />
+        <img className="about-img" src="developer-1.png" />
       </aside>
     </section>
   );

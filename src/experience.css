@@ -40,6 +40,10 @@
   animation: jsJump 2.3s ease-in-out alternate-reverse;
 }
 
+.exp-img {
+  display: none;
+}
+
 @-webkit-keyframes jsJump {
   0% {
   }
@@ -75,9 +79,32 @@
 }
 
 .exp-ul,
-.exp-achiv-ul,
-.exp-company-achiv-ul {
+.exp-achiv-ul {
   list-style: none;
+}
+/* .exp-company-achiv-ul {
+  list-style-type: "> ";
+  margin-left: 1rem;
+} */
+
+.exp-company-achiv-ul {
+  list-style-type: none;
+}
+.exp-company-achiv-ul > li {
+  position: relative;
+  margin-left: 15px;
+}
+.exp-company-achiv-ul > li::before {
+  content: ">";
+  position: absolute;
+  left: -15px;
+}
+.exp-company-achiv-ul > li:first-child {
+  position: unset;
+  margin-left: 0;
+}
+.exp-company-achiv-ul > li:first-child:before {
+  content: none;
 }
 
 .exp-company-job-title {
@@ -107,6 +134,7 @@
 
 .exp-company-stack-item {
   position: relative;
+  max-width: 400px;
 }
 
 .exp-company-stack-item::after {
@@ -129,4 +157,88 @@
 
 .exp-company-achiv-item {
   font-size: 0.9rem;
+}
+
+/* @media (min-width: 450px) {
+  .exp-company-achiv-ul {
+    max-width: 400px;
+  }
+} */
+
+@media (min-width: 650px) {
+  .exp-cover {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #exp-decoration,
+  .exp-main {
+    flex: 0.5;
+  }
+
+  #exp-decoration {
+    display: flex;
+    justify-content: center;
+  }
+
+  .exp-img {
+    display: block;
+    width: 15rem;
+    height: 15rem;
+    object-fit: contain;
+    align-self: center;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 0;
+  }
+
+  .exp-company-stack {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .exp-img {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+
+@media (min-width: 1150px) {
+  .exp-title-div,
+  .exp-ul,
+  .exp-company-achiv-ul {
+    max-width: 100%;
+  }
+
+  .showInterception > div > .exp-title-div > .js-img-mobile {
+    -webkit-animation-delay: 15s;
+    -moz-animation-delay: 15s;
+    animation-delay: 15s;
+  }
+}
+
+@media (min-width: 1368px) {
+  #exp-decoration,
+  .exp-main {
+    flex: 0.3;
+  }
+  .exp-title-div,
+  .exp-ul {
+    max-width: 450px;
+  }
+  .exp-img {
+    margin-right: 4rem;
+  }
+}
+
+@media (min-width: 1550px) {
+  .exp-title-div,
+  .exp-ul {
+    max-width: 550px;
+  }
 }

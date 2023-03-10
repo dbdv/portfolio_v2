@@ -8,10 +8,7 @@ export default function Arrow() {
     });
   };
   return (
-    <div
-      onClick={window.innerWidth < 768 ? () => moveDown() : undefined}
-      className="arrow-item hidden"
-    >
+    <div onClick={() => moveDown()} className="arrow-item hidden">
       <div className="arrow-cover">
         <div className="arrow-shape arrow-1"></div>
       </div>
