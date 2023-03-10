@@ -2,6 +2,7 @@
   display: flex;
   background: var(--soft-gray);
   padding: 1rem 0.7rem;
+  min-height: 90vh;
 }
 
 #exp-aside {
@@ -73,6 +74,59 @@
   }
 }
 
-.exp-ul {
+.exp-ul,
+.exp-achiv-ul,
+.exp-company-achiv-ul {
   list-style: none;
+}
+
+.exp-company-job-title {
+  text-transform: uppercase;
+}
+
+.exp-company-data-div {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3rem;
+}
+
+.exp-company-title {
+}
+
+.exp-company-dates,
+.exp-company-stack {
+  display: flex;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.exp-company-stack {
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.exp-company-stack-item {
+  position: relative;
+}
+
+.exp-company-stack-item::after {
+  content: "";
+  height: 0.1rem;
+  width: 100%;
+  background-color: whitesmoke;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.exp-company-achiv-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  text-align: left;
+  line-height: 1.2rem;
+}
+
+.exp-company-achiv-item {
+  font-size: 0.9rem;
 }

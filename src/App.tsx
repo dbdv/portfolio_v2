@@ -41,8 +41,44 @@ function ExperienceSection() {
           <img className="js-img-mobile" src="javascript-icon-96.png" />
         </div>
         <ul className="exp-ul">
-          {data.experience.map((exp) => {
-            return <li className="exp-item">algo</li>;
+          {data.experience.map((exp, idx) => {
+            return (
+              <li className="exp-item" key={idx + exp.company}>
+                <h3 className="exp-company-job-title">{exp.title}</h3>
+                <div className="exp-company-data-div">
+                  <h4 className="exp-company-title">{exp.company}</h4>
+                  <div className="exp-company-dates">
+                    <span>{exp.since}</span>
+                    <span>-</span>
+                    <span>{exp.until}</span>
+                  </div>
+                  <div className="exp-company-stack">
+                    {exp.stack.map((tech, idx) => {
+                      return (
+                        <span
+                          className="exp-company-stack-item"
+                          key={idx + tech}
+                        >
+                          {tech}
+                        </span>
+                      );
+                    })}
+                  </div>
+                  <ul className="exp-company-achiv-ul">
+                    {exp.achievements.map((achiv, idx) => {
+                      return (
+                        <li
+                          className="exp-company-achiv-item"
+                          key={idx + achiv}
+                        >
+                          {">"} {achiv}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </li>
+            );
           })}
         </ul>
       </div>
