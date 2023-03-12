@@ -2,7 +2,7 @@
   display: flex;
   background: var(--soft-gray);
   padding: 1rem 0.7rem;
-  min-height: 90vh;
+  min-height: 80vh;
 }
 
 #exp-aside {
@@ -31,13 +31,15 @@
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
-  transition: all 1s ease-in-out;
+  transition: all 3s ease-in-out;
+  position: absolute;
+  right: 0;
 }
 
 .showInterception > div > .exp-title-div > .js-img-mobile {
-  -webkit-animation: jsJump 5s ease-in-out infinite;
-  -moz-animation: jsJump 5s ease-in-out infinite;
-  animation: jsJump 2.3s ease-in-out alternate-reverse;
+  -webkit-animation: jsJump 1.5s ease-in-out alternate;
+  -moz-animation: jsJump 1.5s ease-in-out alternate;
+  animation: jsJump 1.5s ease-in-out alternate;
 }
 
 .exp-img {
@@ -46,35 +48,65 @@
 
 @-webkit-keyframes jsJump {
   0% {
+    transform: rotate(-40deg);
   }
 
-  50% {
-    transform: rotate(180deg);
+  35% {
+    transform: rotate(-40deg);
   }
-  100% {
-    transform: rotate(360deg);
+
+  55% {
+    transform: rotate(25deg);
+  }
+
+  75% {
+    transform: rotate(-20deg);
+  }
+
+  90% {
+    transform: rotate(10deg);
   }
 }
 @-moz-keyframes jsJump {
   0% {
+    transform: rotate(-40deg);
   }
 
-  50% {
-    transform: rotate(180deg);
+  35% {
+    transform: rotate(-40deg);
   }
-  100% {
-    transform: rotate(360deg);
+
+  55% {
+    transform: rotate(25deg);
+  }
+
+  75% {
+    transform: rotate(-20deg);
+  }
+
+  90% {
+    transform: rotate(10deg);
   }
 }
 @keyframes jsJump {
   0% {
+    transform: rotate(-40deg);
   }
 
-  50% {
-    transform: rotate(180deg);
+  35% {
+    transform: rotate(-40deg);
   }
-  100% {
-    transform: rotate(360deg);
+
+  55% {
+    transform: rotate(25deg);
+  }
+
+  75% {
+    transform: rotate(-20deg);
+  }
+
+  90% {
+    transform: rotate(10deg);
   }
 }
 

@@ -3,7 +3,7 @@ import "./arrow.css";
 export default function Arrow() {
   const moveDown = () => {
     window.scrollTo({
-      top: window.innerHeight,
+      top: window.innerHeight + window.pageYOffset,
       behavior: "smooth",
     });
   };
