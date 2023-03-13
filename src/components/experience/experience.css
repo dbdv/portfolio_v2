@@ -37,9 +37,9 @@
 }
 
 .showInterception > div > .exp-title-div > .js-img-mobile {
-  -webkit-animation: jsJump 1.5s ease-in-out alternate;
-  -moz-animation: jsJump 1.5s ease-in-out alternate;
-  animation: jsJump 1.5s ease-in-out alternate;
+  -webkit-animation: jsJump 1.5s linear alternate;
+  -moz-animation: jsJump 1.5s linear alternate;
+  animation: jsJump 1.5s linear alternate;
 }
 
 .exp-img {
@@ -247,11 +247,11 @@
     max-width: 100%;
   }
 
-  .showInterception > div > .exp-title-div > .js-img-mobile {
-    -webkit-animation-delay: 15s;
-    -moz-animation-delay: 15s;
-    animation-delay: 15s;
-  }
+  /* .showInterception > div > .exp-title-div > .js-img-mobile {
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s;
+  } */
 }
 
 @media (min-width: 1368px) {

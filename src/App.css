@@ -52,10 +52,19 @@ body {
 .hidden {
   opacity: 0;
   filter: blur(5px);
+  filter: grayscale(100%);
   transition: all 1.5s;
 }
 
 .showInterception {
   opacity: 1;
   filter: blur(0);
+  filter: grayscale(0%);
+}
+
+@media (min-width: 1368px) {
+  section {
+    margin-top: 0 !important;
+    min-height: 60vh !important;
+  }
 }
