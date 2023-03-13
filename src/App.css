@@ -67,4 +67,9 @@ body {
     margin-top: 0 !important;
     min-height: 60vh !important;
   }
+
+  h2 + img {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
 }
