@@ -41,9 +41,9 @@
   height: 1px;
   bottom: 0%;
   left: 0%;
-  -webkit-animation: showBorderSubtitle 3s ease-in-out forwards;
-  -moz-animation: showBorderSubtitle 3s ease-in-out forwards;
-  animation: showBorderSubtitle 3s ease-in-out forwards;
+  -webkit-animation: showBorderSubtitle 2s ease-in-out forwards;
+  -moz-animation: showBorderSubtitle 2s ease-in-out forwards;
+  animation: showBorderSubtitle 2s ease-in-out forwards;
 }
 
 @-webkit-keyframes showBorderSubtitle {
@@ -167,20 +167,33 @@
     height: 2px;
     position: absolute;
     bottom: 10%;
-    -webkit-animation: showBorder 3s ease-in-out alternate;
-    -moz-animation: showBorder 3s ease-in-out alternate;
-    animation: showBorder 3s ease-in-out alternate;
+    -webkit-animation: showBorder 1s ease-in-out alternate;
+    -moz-animation: showBorder 1s ease-in-out alternate;
+    animation: showBorder 1s ease-in-out alternate;
+    background-color: darkgray;
+  }
+
+  #contact-list > li > a:hover > span::after {
+    content: "";
+    width: 0%;
+    left: 4%;
+    height: 2px;
+    position: absolute;
+    bottom: 10%;
+    -webkit-animation: showBorder 1s ease-in-out alternate;
+    -moz-animation: showBorder 1s ease-in-out alternate;
+    animation: showBorder 1s ease-in-out alternate;
     background-color: darkgray;
   }
 
   #contact-list > li > #linkedin > span::after {
-    animation-delay: 3s;
+    animation-delay: 2.5s;
   }
   #contact-list > li > #cv > span::after {
-    animation-delay: 6s;
+    animation-delay: 3.5s;
   }
   #contact-list > li > #email > span::after {
-    animation-delay: 9s;
+    animation-delay: 4.5s;
   }
 
   @-webkit-keyframes showBorder {
@@ -211,11 +224,11 @@
   }
 
   #contact-list > li > #cv > span::after {
-    background-color: var(--cv-color);
+    background-color: var(--node-color);
   }
 
   #contact-list > li:hover > #cv {
-    color: var(--cv-color);
+    color: var(--node-color);
   }
 
   #contact-list > li > #linkedin > span::after {
@@ -228,6 +241,40 @@
 }
 
 @media (min-width: 1168px) {
+  #contact-list > li > a > span::after {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+  }
+
+  #contact-list > li > a:hover > span::after {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+    width: 90%;
+  }
+
+  #contact-list > li > #linkedin > span::after {
+    animation-delay: 0s;
+  }
+  #contact-list > li > #cv > span::after {
+    animation-delay: 0s;
+  }
+  #contact-list > li > #email > span::after {
+    animation-delay: 0s;
+  }
+
+  #email {
+    color: var(--dark-blue);
+  }
+
+  #cv {
+    color: var(--dark-blue);
+  }
+
+  #linkedin {
+    color: var(--dark-blue);
+  }
   #header {
     min-width: 100%;
     display: flex;
@@ -279,7 +326,7 @@
   }
 
   #contact-list > li:hover > a {
-    font-weight: 400;
+    /* font-weight: 400; */
     cursor: pointer;
   }
 
@@ -287,60 +334,4 @@
     width: fit-content;
     position: relative;
   }
-
-  /*  #contact-list > li > a > span::after {
-    content: "";
-    width: 0%;
-    left: 4%;
-    height: 2px;
-    position: absolute;
-    bottom: 15%;
-    -webkit-animation: showBorder 3s ease-in-out infinite;
-    -moz-animation: showBorder 3s ease-in-out infinite;
-    animation: showBorder 3s ease-in-out infinite;
-    background-color: darkgray;
-  }
-
-  @-webkit-keyframes showBorder {
-    100% {
-      left: 4%;
-      width: 96%;
-    }
-  }
-  @-moz-keyframes showBorder {
-    100% {
-      left: 4%;
-      width: 96%;
-    }
-  }
-  @keyframes showBorder {
-    100% {
-      left: 4%;
-      width: 96%;
-    }
-  }
-
-  #contact-list > li > #email:hover > span::after {
-    background-color: var(--email-color);
-  }
-
-  #contact-list > li:hover > #email {
-    color: var(--email-color);
-  }
-
-  #contact-list > li > #cv:hover > span::after {
-    background-color: var(--cv-color);
-  }
-
-  #contact-list > li:hover > #cv {
-    color: var(--cv-color);
-  }
-
-  #contact-list > li > #linkedin:hover > span::after {
-    background-color: var(--linkedin-color);
-  }
-
-  #contact-list > li:hover > #linkedin {
-    color: var(--linkedin-color);
-  } */
 }
