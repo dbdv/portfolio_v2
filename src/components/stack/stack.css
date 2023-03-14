@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   min-height: 70vh;
+  padding: 1rem 0.7rem;
 }
 
 .section-main-div-cover {
@@ -43,7 +44,6 @@
   width: 100%;
   min-height: 8rem;
   height: fit-content;
-  padding-left: 1rem;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -75,9 +75,41 @@
   }
 }
 
+.section > aside {
+  display: none;
+}
+
 @media (min-width: 600px) {
   .section-main-div-cover {
     max-width: 600px;
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .external-container {
+    padding: 0;
+  }
+  .external-container,
+  .section > aside {
+    flex: 0.3;
+  }
+
+  .section > aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section > aside > img {
+    object-fit: contain;
+    border-radius: 50%;
+    width: 18rem;
+    height: 18rem;
+    background-color: white;
   }
 }
 

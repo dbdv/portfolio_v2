@@ -80,7 +80,6 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    flex: 0.9;
   }
 
   .p {
@@ -129,6 +128,14 @@
   .p-div,
   #about-decoration {
     flex: 0.3;
+    max-width: 800px;
+  }
+
+  .p {
+    max-width: 900px;
+    font-size: 1.15rem;
+    line-height: 1.25rem;
+    margin-right: 1rem;
   }
 
   #about-decoration {
@@ -137,5 +144,10 @@
 
   #about-decoration > img {
     margin-right: 4rem;
+  }
+
+  .about-img {
+    width: 24rem;
+    height: 24rem;
   }
 }

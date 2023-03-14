@@ -269,8 +269,53 @@
 }
 
 @media (min-width: 1550px) {
+  .exp-cover {
+    min-height: auto;
+  }
   .exp-title-div,
   .exp-ul {
-    max-width: 550px;
+    max-width: 800px;
+  }
+
+  /*   .exp-company-job-title {
+    font-size: 1.6rem;
+  } */
+
+  .exp-company-data-div > h4 {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+
+  .exp-company-dates,
+  .exp-company-stack {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+
+  .exp-company-achiv-item {
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .exp-company-job-title {
+    font-size: 1.6rem;
+  }
+
+  .exp-company-data-div > h4 {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .exp-company-dates,
+  .exp-company-stack {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+
+  .exp-company-achiv-item {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
   }
 }

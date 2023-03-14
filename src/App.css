@@ -65,7 +65,29 @@ body {
 @media (min-width: 1368px) {
   section {
     margin-top: 0 !important;
-    min-height: 60vh !important;
+    height: 60vh !important;
+    max-height: 600px !important;
+  }
+
+  h2 + img {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  aside > img {
+    width: 24rem !important;
+    height: 24rem !important;
+  }
+}
+
+@media (min-width: 2000px) {
+  p {
+    line-height: 1.4rem !important;
+    font-size: 1.4rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
   }
 
   h2 + img {

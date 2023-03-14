@@ -5,7 +5,7 @@ import { Stack } from "../../types";
 
 export default function MyStack({ stack }: { stack: Stack }) {
   return (
-    <section role="mi stack" className="hidden padding">
+    <section role="mi stack" className="section hidden">
       <div className="external-container">
         <div className="section-main-div-cover">
           <h2 className="section-title stack-title">Mi stack</h2>
@@ -28,7 +28,9 @@ export default function MyStack({ stack }: { stack: Stack }) {
           })}
         </article>
       </div>
-      <aside></aside>
+      <aside>
+        <img src="developer-5.png" alt="" />
+      </aside>
     </section>
   );
 }
