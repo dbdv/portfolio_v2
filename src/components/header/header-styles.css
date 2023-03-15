@@ -20,6 +20,8 @@
 
 .header-inner-div {
   max-width: 1950px;
+  display: flex;
+  flex-direction: column;
 }
 
 #header > div > div:first-child {

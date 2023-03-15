@@ -1,18 +1,10 @@
-/* .cover-lang-icons,
-.cover-techs-icons {
-  position: relative;
-  width: 100%;
-  min-height: 6rem;
-  height: fit-content;
-}
- */
 .cover-lang-icons,
 .cover-techs-icons {
   width: 100%;
 }
 .icon-cover {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   /* background: white; */
   display: flex;
   color: whitesmoke;
@@ -28,86 +20,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
 }
 
 .inner-icon-cover > img {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .inner-icon-cover > h4 {
   font-size: 0.8rem;
   text-transform: capitalize;
+  width: 100%;
+  text-align: center;
 }
 
 .express-bg {
   background: white;
 }
 
-/* .showInterception > div > article > div > div {
-  -webkit-animation: arriveLeft 2s linear alternate;
-  -moz-animation: arriveLeft 2s linear alternate;
-  animation: arriveLeft 2s linear alternate;
-}
+@media (min-width: 600px) {
+  .inner-icon-cover {
+    width: 5rem;
+    height: 5rem;
+  }
 
-.showInterception > div > .cover-techs-icons > div {
-  -webkit-animation: arriveLeft 2s linear alternate;
-  -moz-animation: arriveLeft 2s linear alternate;
-  animation: arriveLeft 4s linear alternate !important;
-} */
-
-@-webkit-keyframes arriveLeft {
-  0% {
-    left: -100%;
-  }
-  25% {
-    left: 0;
+  .inner-icon-cover > img {
+    width: 3rem;
+    height: 3rem;
   }
 }
-@-moz-keyframes arriveLeft {
-  0% {
-    left: -100%;
-  }
-  25% {
-    left: 0;
-  }
-}
-@keyframes arriveLeft {
-  0% {
-    filter: grayscale(100%);
-    /* opacity: 0; */
-  }
-  50% {
-    filter: grayscale(50%);
-    /* opacity: 0.5; */
-  }
-  100% {
-    filter: grayscale(0%);
-    /* opacity: 1; */
-  }
-}
-
-/* @-webkit-keyframes arriveRight {
-  0% {
-    right: -100%;
-  }
-  25% {
-    right: 0;
-  }
-}
-@-moz-keyframes arriveRight {
-  0% {
-    right: -100%;
-  }
-  25% {
-    right: 0;
-  }
-}
-@keyframes arriveRight {
-  0% {
-    right: -100%;
-  }
-  30% {
-    right: 0;
-  }
-} */

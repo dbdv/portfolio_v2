@@ -1,9 +1,10 @@
 .arrow-item {
-  height: 10rem;
+  height: 30vh;
   display: flex;
   justify-content: center;
   width: 100%;
   position: relative;
+  align-items: center;
 }
 
 .arrow-cover {
