@@ -4,7 +4,7 @@ import {
   FaAngleLeft as LeftArrow,
   FaAngleRight as RightArrow,
 } from "react-icons/fa";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Carousel() {
   const [isDragging, setIsDragging] = useState(false);
@@ -30,7 +30,6 @@ export default function Carousel() {
 
   useEffect(() => {
     setCardWidth(document.querySelector(".card")!.clientWidth + 16);
-    console.log(cardWidth);
   }, []);
 
   return (
@@ -42,41 +41,19 @@ export default function Carousel() {
         }}
       />
       <div
-        onClick={() => setIsDragging(true)}
-        onMouseDown={(e) => {
-          e.preventDefault();
-          console.log("aca 1");
-          const carousel = document.querySelector(".content-cover");
-          setPrevX(e.pageX);
-          setprevScrollLeft(carousel!.scrollLeft);
-          setIsDragging(true);
-        }}
         onTouchStart={(e) => {
           e.preventDefault();
-          console.log("aca 1");
           const carousel = document.querySelector(".content-cover");
           setPrevX(e.touches[0].pageX);
           setprevScrollLeft(carousel!.scrollLeft);
           setIsDragging(true);
         }}
-        onMouseUp={() => setIsDragging(false)}
         onTouchEnd={() => {
           setIsDragging(false);
           autoSlide();
         }}
-        onMouseMove={(e) => {
-          e.preventDefault();
-          console.log("aca 2");
-          if (isDragging) {
-            const carousel = document.querySelector(".content-cover");
-            setPositionDiff(e.pageX - prevX);
-            carousel!.scrollLeft = prevScrollLeft - positionDiff;
-            autoSlide();
-          }
-        }}
         onTouchMove={(e) => {
           e.preventDefault();
-          console.log("aca 2");
           if (isDragging) {
             const carousel = document.querySelector(".content-cover");
             setPositionDiff(e.touches[0].pageX - prevX);
