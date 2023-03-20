@@ -10,7 +10,7 @@ interface props {
 
 export default function Card({ project, title }: props) {
   return (
-    <article className="card">
+    <article className="card" draggable={false}>
       <div className="card-visible">
         <img className="card-img" src="developer-4.png" alt="" />
         <div className="card-info">

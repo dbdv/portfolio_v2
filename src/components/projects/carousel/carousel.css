@@ -21,6 +21,7 @@
   overflow-x: scroll;
   position: relative;
   --separation: 5px;
+  scroll-behavior: smooth;
 }
 
 .arrow {

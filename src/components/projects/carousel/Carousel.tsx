@@ -14,21 +14,22 @@ export default function Carousel() {
   const [positionDiff, setPositionDiff] = useState(0);
 
   const autoSlide = () => {
-    console.log("acc3333");
     const carousel = document.querySelector(".content-cover");
     const valDiff = cardWidth - Math.abs(positionDiff);
     if (carousel!.scrollLeft > prevScrollLeft) {
-      console.log("se mueve a la izq");
       return (carousel!.scrollLeft +=
-        positionDiff > cardWidth / 3 ? valDiff : Math.abs(positionDiff));
+        Math.abs(positionDiff) > cardWidth / 2
+          ? valDiff
+          : -Math.abs(positionDiff));
     }
-    console.log("se mueve a la derec");
     carousel!.scrollLeft -=
-      positionDiff > cardWidth / 3 ? valDiff : Math.abs(positionDiff);
+      Math.abs(positionDiff) > cardWidth / 2
+        ? valDiff
+        : -Math.abs(positionDiff);
   };
 
   useEffect(() => {
-    setCardWidth(document.querySelector(".card")!.clientWidth + 14);
+    setCardWidth(document.querySelector(".card")!.clientWidth + 16);
     console.log(cardWidth);
   }, []);
 
@@ -41,7 +42,7 @@ export default function Carousel() {
         }}
       />
       <div
-        // onClick={() => setIsDragging(true)}
+        onClick={() => setIsDragging(true)}
         onMouseDown={(e) => {
           e.preventDefault();
           console.log("aca 1");
@@ -83,6 +84,7 @@ export default function Carousel() {
           }
         }}
         className="content-cover"
+        draggable={false}
       >
         <Card title="1" />
         <Card title="2" />
