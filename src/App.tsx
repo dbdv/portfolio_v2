@@ -6,6 +6,7 @@ import AboutSection from "./components/about/About";
 import Arrow from "./components/animated-arrow/arrow";
 import ExperienceSection from "./components/experience/Experience";
 import MyStack from "./components/stack/Stack";
+import Projects from "./components/projects/Projects";
 
 function App() {
   useObserver();
@@ -19,7 +20,7 @@ function App() {
         <Arrow />
         <MyStack stack={data.stack} />
         <Arrow />
-        <section role="proyectos">Projects</section>
+        <Projects projects={data.projects} />
       </main>
     </div>
   );

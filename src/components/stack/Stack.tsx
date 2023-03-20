@@ -13,9 +13,13 @@ export default function MyStack({ stack }: { stack: Stack }) {
         </div>
         <h3>Lenguajes y Frameworks</h3>
         <article className="cover-lang-icons">
-          {stack.laguanges.map((lang) => {
+          {stack.laguanges.map((lang, idx) => {
             return (
-              <IconDiv icon_url={lang.icon_url} label={lang.laguange_name} />
+              <IconDiv
+                key={lang.laguange_name + idx}
+                icon_url={lang.icon_url}
+                label={lang.laguange_name}
+              />
             );
           })}
         </article>
@@ -23,7 +27,11 @@ export default function MyStack({ stack }: { stack: Stack }) {
         <article className="cover-techs-icons">
           {stack.techlonogies.map((tech, idx) => {
             return (
-              <IconDiv icon_url={tech.icon_url} label={tech.technology_name} />
+              <IconDiv
+                key={tech.technology_name + idx}
+                icon_url={tech.icon_url}
+                label={tech.technology_name}
+              />
             );
           })}
         </article>

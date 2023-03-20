@@ -12,7 +12,14 @@ export type Stack = {
   techlonogies: { technology_name: string; icon_url: string }[];
 };
 
-export type Project = {};
+export type Project = {
+  title: string,
+  description: string,
+  stack: string[],
+  repo: string,
+  deploy: string,
+  imgPreview: string,
+};
 
 export type Data = {
     about: string,

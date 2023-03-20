@@ -12,8 +12,10 @@ export default function AboutSection({ data }: props) {
           <h2 className="about-title">Sobre mí</h2>
           <img className="react-img-mobile" src="react-icon-480.png" />
         </div>
-        {data.split("\n").map((text: string) => (
-          <p className="p">{text}</p>
+        {data.split("\n").map((text: string, idx) => (
+          <p key={idx} className="p">
+            {text}
+          </p>
         ))}
       </div>
       <aside id="about-decoration">

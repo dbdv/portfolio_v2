@@ -17,8 +17,11 @@
   --sky-blue-darker: #219ebc;
   --bone: #f1faee;
   --soft-gray: #3c3c3c;
+  --soft-gray-opac: hsl(0, 0%, 24%, 50%);
   --js-color: #fdd500;
   --node-color: #22a066;
+  --git-color: #f4511e;
+  --radius: 1.5rem;
 }
 
 #root {

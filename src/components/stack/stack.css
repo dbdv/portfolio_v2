@@ -6,8 +6,8 @@
   justify-content: start;
   min-height: 70vh;
   padding: 1rem 0.7rem;
-  --firs-in-appear: var(--second-in-appear);
-  --second-in-appear: 1.2s;
+  --firs-in-appear: 1.2s;
+  --second-in-appear: 1.3s;
   --last-in-appear: 1.4s;
 }
 
@@ -30,8 +30,8 @@
 }
 
 .node-img-mobile {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   position: absolute;
   right: 0;
 }
@@ -84,37 +84,6 @@
 }
 
 /* ANIMACIONES DE LAS LOS ICONOS */
-
-/* ANIMACION */
-.showInterception > div > article > .icon-cover {
-  transition: all 1s ease-in-out;
-  -webkit-animation: expand var(--firs-in-appear) linear forwards;
-  -moz-animation: expand var(--firs-in-appear) linear forwards;
-  animation: expand var(--firs-in-appear) ease-in-out forwards;
-}
-
-/* PRIMEROS EN APARECER, ICONOS 2 Y 6 */
-.showInterception > div > article > .icon-cover:nth-child(2),
-.showInterception > div > article > .icon-cover:nth-child(6) {
-  -webkit-animation-duration: var(--firs-in-appear);
-  -moz-animation-duration: var(--firs-in-appear);
-  animation-duration: var(--firs-in-appear);
-}
-
-/* SEGUNDOS EN APARECER, ICONOS 3 Y 5 */
-.showInterception > div > article > .icon-cover:nth-child(3),
-.showInterception > div > article > .icon-cover:nth-child(5) {
-  -webkit-animation-duration: var(--second-in-appear);
-  -moz-animation-duration: var(--second-in-appear);
-  animation-duration: var(--second-in-appear);
-}
-
-/* TERCERO EN APARECER, ICONOS 4 */
-.showInterception > div > article > .icon-cover:nth-child(4) {
-  -webkit-animation-duration: var(--last-in-appear);
-  -moz-animation-duration: var(--last-in-appear);
-  animation-duration: var(--last-in-appear);
-}
 
 /* ANIMACIONES DE LOS ELEMENTOS INTERNOS */
 .showInterception > div > article > .icon-cover > .inner-icon-cover > img {
@@ -287,6 +256,39 @@
   }
 }
 
+@media (min-width: 1153px) {
+  /* ANIMACION DE LA CAJA*/
+  .showInterception > div > article > .icon-cover {
+    transition: all 1s ease-in-out;
+    -webkit-animation: expand var(--firs-in-appear) linear forwards;
+    -moz-animation: expand var(--firs-in-appear) linear forwards;
+    animation: expand var(--firs-in-appear) ease-in-out forwards;
+  }
+
+  /* PRIMEROS EN APARECER, ICONOS 2 Y 6 */
+  .showInterception > div > article > .icon-cover:nth-child(2),
+  .showInterception > div > article > .icon-cover:nth-child(6) {
+    -webkit-animation-duration: var(--firs-in-appear);
+    -moz-animation-duration: var(--firs-in-appear);
+    animation-duration: var(--firs-in-appear);
+  }
+
+  /* SEGUNDOS EN APARECER, ICONOS 3 Y 5 */
+  .showInterception > div > article > .icon-cover:nth-child(3),
+  .showInterception > div > article > .icon-cover:nth-child(5) {
+    -webkit-animation-duration: var(--second-in-appear);
+    -moz-animation-duration: var(--second-in-appear);
+    animation-duration: var(--second-in-appear);
+  }
+
+  /* TERCERO EN APARECER, ICONOS 4 */
+  .showInterception > div > article > .icon-cover:nth-child(4) {
+    -webkit-animation-duration: var(--last-in-appear);
+    -moz-animation-duration: var(--last-in-appear);
+    animation-duration: var(--last-in-appear);
+  }
+}
+
 @media (min-width: 650px) {
   .section-main-div-cover {
     max-width: 800px;
@@ -311,7 +313,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    align-self: flex-start;
+    align-self: center;
   }
 
   .section > aside > img {

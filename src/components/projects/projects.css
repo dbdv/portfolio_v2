@@ -1,0 +1,46 @@
+.project-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  justify-content: start;
+  min-height: 70vh;
+  padding: 1rem 0.7rem;
+}
+
+.project-section-title-div {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.project-section-title {
+  color: var(--git-color);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.git-img-mobile {
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: all 3s ease-in-out;
+  position: absolute;
+  right: 0;
+}
+
+@media (min-width: 600px) {
+  .project-section {
+    justify-content: center;
+    align-items: center;
+  }
+  .project-section-title-div {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .project-section-title-div {
+    max-width: 700px;
+  }
+}

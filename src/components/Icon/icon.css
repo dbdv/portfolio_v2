@@ -3,8 +3,8 @@
   width: 100%;
 }
 .icon-cover {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   /* background: white; */
   display: flex;
   color: whitesmoke;
@@ -21,8 +21,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .inner-icon-cover > img {
