@@ -5,20 +5,20 @@
   height: fit-content;
   display: flex;
   justify-content: center;
-  overflow-x: scroll;
+  overflow: hidden;
   position: relative;
   --separation: 5px;
 }
 
 .content-cover {
-  max-width: 600px;
+  /* max-width: 600px; */
   width: 100%;
   white-space: nowrap;
   height: fit-content;
   display: flex;
   gap: 16px;
   justify-content: start;
-  overflow-x: scroll;
+  overflow: hidden;
   position: relative;
   --separation: 5px;
   scroll-behavior: smooth;
@@ -26,7 +26,7 @@
 
 .arrow {
   position: absolute;
-  font-size: 3rem;
+  font-size: 2.3rem;
   color: var(--git-color);
   z-index: 10;
   margin: auto 0;
@@ -48,8 +48,14 @@
   right: var(--separation);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 400px) {
+  .arrow {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 900px) {
   .carousel {
-    /* --separation: -10%;  */
+    max-width: 700px;
   }
 }
