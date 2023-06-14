@@ -34,8 +34,8 @@ export const data: Data = {
     stack: {
         laguanges: [
             {
-                laguange_name: "javascript", 
-                icon_url: "javascript-icon-96.png"
+                laguange_name: "angular", 
+                icon_url: "angular-icon-96.png"
             },
             {
                 laguange_name: "Node", 

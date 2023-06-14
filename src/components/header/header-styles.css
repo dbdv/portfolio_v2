@@ -16,6 +16,7 @@
   justify-content: space-between;
   color: var(--dark-blue);
   position: relative;
+  flex: 0.9;
 }
 
 .header-inner-div {
@@ -100,9 +101,14 @@
   align-items: center;
   gap: 0.3rem;
   text-transform: capitalize;
+  color: var(--dark-blue);
 }
 
-#email {
+.link:hover {
+  color: #02547d;
+}
+
+/* #email {
   color: var(--email-color);
 }
 
@@ -112,7 +118,7 @@
 
 #linkedin {
   color: var(--linkedin-color);
-}
+} */
 
 #slider-controller {
   display: flex;
@@ -173,7 +179,7 @@
     position: relative;
   }
 
-  #contact-list > li > a > span::after {
+  /*  #contact-list > li > a > span::after {
     content: "";
     width: 0%;
     left: 4%;
@@ -183,10 +189,10 @@
     -webkit-animation: showBorder 1s ease-in-out alternate;
     -moz-animation: showBorder 1s ease-in-out alternate;
     animation: showBorder 1s ease-in-out alternate;
-    background-color: darkgray;
-  }
+    background-color: var(--dark-blue);
+  } */
 
-  #contact-list > li > a:hover > span::after {
+  /* #contact-list > li > a:hover > span::after {
     content: "";
     width: 0%;
     left: 4%;
@@ -196,8 +202,8 @@
     -webkit-animation: showBorder 1s ease-in-out alternate;
     -moz-animation: showBorder 1s ease-in-out alternate;
     animation: showBorder 1s ease-in-out alternate;
-    background-color: darkgray;
-  }
+    background-color: var(--dark-blue);
+  } */
 
   #contact-list > li > #linkedin > span::after {
     animation-delay: 2.5s;
@@ -228,7 +234,7 @@
     }
   }
 
-  #contact-list > li > #email > span::after {
+  /*  #contact-list > li > #email > span::after {
     background-color: var(--email-color);
   }
 
@@ -250,7 +256,7 @@
 
   #contact-list > li:hover > #linkedin {
     color: var(--linkedin-color);
-  }
+  } */
 }
 
 @media (min-width: 1168px) {
@@ -277,7 +283,7 @@
     animation-delay: 0s;
   }
 
-  #email {
+  /* #email {
     color: var(--dark-blue);
   }
 
@@ -287,24 +293,25 @@
 
   #linkedin {
     color: var(--dark-blue);
-  }
+  } */
   #header > div {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
   }
 
   #header > div > div:first-child {
-    padding-left: 1rem;
+    padding-left: 0.5rem;
   }
 
   #header > div > div:nth-child(2) {
     display: flex;
     background: none;
     justify-content: flex-end;
-    padding-right: 1rem;
+    padding-right: 0;
+    margin-bottom: 0;
   }
 
   #header > div > div > h1,
@@ -321,8 +328,10 @@
 
   #contact-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     list-style-type: none;
+    gap: 1rem;
+    padding: 0 0.7rem;
   }
 
   #contact-list > li > a {
@@ -341,6 +350,7 @@
   #contact-list > li:hover > a {
     /* font-weight: 400; */
     cursor: pointer;
+    scale: 1.2;
   }
 
   #contact-list > li > a > span {
