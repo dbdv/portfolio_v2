@@ -13,7 +13,7 @@ export default function Projects({ projects }: props) {
         <h2 className="project-section-title">Proyectos</h2>
         <img className="git-img-mobile" src="git-icon-96.png" />
       </div>
-      <Carousel />
+      <Carousel projects={projects} />
     </section>
   );
 }

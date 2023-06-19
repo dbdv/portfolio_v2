@@ -1,4 +1,4 @@
-import { Data, Job } from "./types";
+import { Data, Job, Project } from "./types";
 
 const aboutInfo = "Hola  me llamo Daniel, soy un desarrollador web que empezó a conocer este mundillo en el 2020 y pude empezar a desempeñarme profesionalmente como dev en septiembre 2022, específicamente en el área fintech.\nConsidero que mi fuerte es la adaptabilidad y la iniciativa.\nSi bien ahora me desempeño como fullstack, me gustaría poder especializarme en el frontend, mi tecnología fuerte es React.\nMe encanta involucrarme en proyectos desafiantes que me impulsen a aprender cosas nuevas y eso es lo que siempre intento buscar.\nPodés contactarme por cualquiera de mis redes que se ven en la parte superior de la página!";
 
@@ -26,11 +26,43 @@ const jobs: Job[] = [
         company: "IT Resources",
     }
 ];
+const projects: Project[] = [
+    {
+        deploy: "https://maquetado-meli-detalles-producto.vercel.app/",
+        description: "Copia de la UI de la pantalla de un producto de E-Commerce Mercado Libre",
+        imgPreview: "meli_ss.png",
+        repo: "https://github.com/dbdv/maquetado-meli-detalles-producto",
+        stack: ["React", "CSS", "HTML"],
+        title: "Mercado Libre UI"
+    },
+    {
+        description: "Aplicación fullstack hecha con Node, usando Express y PUG para las templates. La misma cuenta con un sistema de gestión interno de usuarios, manejo de fechas y horarios, funcionalidades por tipo de usuario y conexión a una base de datos MySQL.",
+        imgPreview: "attendances.png",
+        repo: "https://github.com/dbdv/to-do_using_pug",
+        stack: ["Node", "Express", "MySQL", "PUG", "CSS", "HTML"],
+        title: "Gestión de asistencias universitaria"
+    },
+    {
+        description: "La típica ToDo, pero encarada como una server app.",
+        imgPreview: "todo_db.png",
+        repo: "https://github.com/dbdv/to-do_using_pug",
+        stack: ["Node", "Express", "MySQL", "PUG", "CSS", "HTML"],
+        title: "La típica ToDo app... pero con Node!"
+    },
+    {
+        title: "Rreto de 30 días de código de Goncy Pozzo.",
+        imgPreview: "adviency.png",
+        repo: "https://github.com/dbdv/adviency_10",
+        deploy: "https://lista-de-regalos-adviency-10.vercel.app/",
+        stack: ["React", "CSS", "HTML"],
+        description: "Este proyecto forma parte del reto de 30 días de código de Goncy Pozzo. La idea era rehacer la misma aplicación desde 0 durante 30 días e ir agregando funcionalidades de manera incremental."
+    },
+]
 
 export const data: Data = {
     about: aboutInfo,
     experience: jobs,
-    projects: [],
+    projects: projects,
     stack: {
         laguanges: [
             {

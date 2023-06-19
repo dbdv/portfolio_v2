@@ -5,8 +5,13 @@ import {
   FaAngleRight as RightArrow,
 } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { Project } from "../../../types";
 
-export default function Carousel() {
+interface CarrouselProps {
+  projects: Project[];
+}
+
+export default function Carousel({ projects }: CarrouselProps) {
   const [isDragging, setIsDragging] = useState(false);
   const [prevX, setPrevX] = useState(0);
   const [prevScrollLeft, setprevScrollLeft] = useState(0);
@@ -29,15 +34,27 @@ export default function Carousel() {
   };
 
   useEffect(() => {
-    setCardWidth(document.querySelector(".card")!.clientWidth + 16);
+    if (document.querySelector(".card"))
+      setCardWidth(document.querySelector(".card")!.clientWidth + 16);
   }, []);
 
   return (
     <div className="carousel" draggable={false}>
       <LeftArrow
         className="arrow"
+        id="leftArrow"
         onClick={() => {
-          document.querySelector(".content-cover")!.scrollLeft -= cardWidth;
+          const $contentContainer = document.querySelector(".content-cover");
+          $contentContainer!.scrollLeft -= cardWidth;
+
+          document
+            .querySelector("#rightArrow")
+            ?.classList.remove("hidden", "remove");
+          if ($contentContainer!.scrollLeft - 716 == 0) {
+            document
+              .querySelector("#leftArrow")
+              ?.classList.add("hidden", "remove");
+          }
         }}
       />
       <div
@@ -63,15 +80,28 @@ export default function Carousel() {
         className="content-cover"
         draggable={false}
       >
-        <Card title="1" />
-        <Card title="2" />
-        <Card title="3" />
+        {projects.map((proj, idx) => {
+          return <Card key={idx} {...proj} />;
+        })}
       </div>
       <RightArrow
         className="arrow"
+        id="rightArrow"
         onClick={(e) => {
           e.preventDefault();
-          document.querySelector(".content-cover")!.scrollLeft += cardWidth;
+          const $contentContainer = document.querySelector(".content-cover");
+          $contentContainer!.scrollLeft += cardWidth;
+          document
+            .querySelector("#leftArrow")
+            ?.classList.remove("hidden", "remove");
+          if (
+            $contentContainer!.scrollLeft + 2 * 708 ==
+            $contentContainer?.scrollWidth
+          ) {
+            document
+              .querySelector("#rightArrow")
+              ?.classList.add("hidden", "remove");
+          }
         }}
       />
     </div>

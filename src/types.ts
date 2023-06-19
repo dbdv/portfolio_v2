@@ -17,7 +17,7 @@ export type Project = {
   description: string,
   stack: string[],
   repo: string,
-  deploy: string,
+  deploy?: string,
   imgPreview: string,
 };
 
