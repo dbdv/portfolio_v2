@@ -90,7 +90,7 @@
   overflow: hidden;
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style-type: none;
   padding: 0 1rem;
 }
@@ -343,7 +343,7 @@
     padding: 0.1rem;
     transition: all 0.5s ease-out;
     text-transform: capitalize;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     width: fit-content;
   }
 

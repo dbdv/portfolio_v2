@@ -1,27 +1,13 @@
 .carousel {
-  max-width: 600px;
   width: 100%;
-  white-space: nowrap;
   height: fit-content;
   display: flex;
   justify-content: center;
-  overflow: hidden;
   position: relative;
   --separation: 5px;
-}
-
-.content-cover {
-  /* max-width: 600px; */
-  width: 100%;
-  white-space: nowrap;
-  height: fit-content;
-  display: flex;
   gap: 16px;
-  justify-content: start;
-  overflow: auto;
-  position: relative;
-  --separation: 5px;
-  scroll-behavior: smooth;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .arrow {
@@ -57,7 +43,8 @@
 @media (min-width: 900px) {
   .carousel {
     max-width: 100%;
-    overflow: auto;
+    justify-content: space-around;
+    padding: 3rem;
   }
 
   .content-cover {

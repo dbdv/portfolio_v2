@@ -21,48 +21,9 @@ export default function Carousel({ projects }: CarrouselProps) {
 
   return (
     <div className="carousel" draggable={false}>
-      <LeftArrow
-        className="arrow"
-        id="leftArrow"
-        onClick={() => {
-          const $contentContainer = document.querySelector(".content-cover");
-          $contentContainer!.scrollLeft -= cardWidth;
-
-          document
-            .querySelector("#rightArrow")
-            ?.classList.remove("hidden", "remove");
-          if ($contentContainer!.scrollLeft - 716 == 0) {
-            document
-              .querySelector("#leftArrow")
-              ?.classList.add("hidden", "remove");
-          }
-        }}
-      />
-      <div className="content-cover">
-        {projects.map((proj, idx) => {
-          return <Card key={idx} {...proj} />;
-        })}
-      </div>
-      <RightArrow
-        className="arrow"
-        id="rightArrow"
-        onClick={(e) => {
-          e.preventDefault();
-          const $contentContainer = document.querySelector(".content-cover");
-          $contentContainer!.scrollLeft += cardWidth;
-          document
-            .querySelector("#leftArrow")
-            ?.classList.remove("hidden", "remove");
-          if (
-            $contentContainer!.scrollLeft + 2 * 708 ==
-            $contentContainer?.scrollWidth
-          ) {
-            document
-              .querySelector("#rightArrow")
-              ?.classList.add("hidden", "remove");
-          }
-        }}
-      />
+      {projects.map((proj, idx) => {
+        return <Card key={idx} {...proj} />;
+      })}
     </div>
   );
 }
