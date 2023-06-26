@@ -15,11 +15,11 @@ function App() {
       <Header />
       <main className="main">
         <AboutSection data={data.about} />
-        <Arrow />
+        {/* <Arrow /> */}
         <ExperienceSection data={data.experience} />
-        <Arrow />
+        {/* <Arrow /> */}
         <MyStack stack={data.stack} />
-        <Arrow />
+        {/* <Arrow /> */}
         <Projects projects={data.projects} />
       </main>
     </div>

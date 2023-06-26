@@ -30,10 +30,10 @@
   color: var(--git-color);
   z-index: 10;
   margin: auto 0;
-  background-color: rgba(44, 40, 40, 0.705);
+  background-color: rgba(44, 40, 40, 0.921);
   border-radius: 50px;
   padding: 0.3rem;
-  top: 55%;
+  top: 25%;
 }
 
 .arrow:hover {
@@ -56,6 +56,18 @@
 
 @media (min-width: 900px) {
   .carousel {
-    max-width: 700px;
+    max-width: 100%;
+    overflow: auto;
+  }
+
+  .content-cover {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    flex-flow: wrap;
+  }
+
+  .arrow {
+    display: none;
   }
 }

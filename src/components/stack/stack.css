@@ -4,7 +4,6 @@
   width: 100%;
   gap: 1rem;
   justify-content: start;
-  min-height: 70vh;
   padding: 1rem 0.7rem;
   --firs-in-appear: 1.2s;
   --second-in-appear: 1.3s;
@@ -332,12 +331,12 @@
 
 @media (min-width: 450px) {
   .section {
-    padding: 2rem 1rem;
+    padding: 0rem 1rem;
   }
 }
 @media (min-width: 800px) {
   .external-container {
-    min-height: 80vh;
+    /* min-height: 80vh; */
   }
   .external-container {
     justify-content: center;

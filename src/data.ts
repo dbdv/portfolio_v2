@@ -1,6 +1,6 @@
 import { Data, Job, Project } from "./types";
 
-const aboutInfo = "Hola  me llamo Daniel, soy un desarrollador web que empezó a conocer este mundillo en el 2020 y pude empezar a desempeñarme profesionalmente como dev en septiembre 2022, específicamente en el área fintech.\nConsidero que mi fuerte es la adaptabilidad y la iniciativa.\nSi bien ahora me desempeño como fullstack, me gustaría poder especializarme en el frontend, mi tecnología fuerte es React.\nMe encanta involucrarme en proyectos desafiantes que me impulsen a aprender cosas nuevas y eso es lo que siempre intento buscar.\nPodés contactarme por cualquiera de mis redes que se ven en la parte superior de la página!";
+const aboutInfo = "Técnico en informática. \n Trabajando de manera profesional desde septiembre 2022, específicamente en el área fintech.\nMis fuertes: adaptabilidad e iniciativa.\nSi bien ahora me desempeño como fullstack, me gustaría poder especializarme en el frontend, actualmente mi tecnología fuerte es React.\nMe encanta involucrarme en proyectos desafiantes que me impulsen a aprender cosas nuevas.\nContáctame!";
 
 const jobs: Job[] = [
     {
@@ -50,7 +50,7 @@ const projects: Project[] = [
         title: "La típica ToDo app... pero con Node!"
     },
     {
-        title: "Rreto de 30 días de código de Goncy Pozzo.",
+        title: "Reto 30 días de código @Goncy Pozzo",
         imgPreview: "adviency.png",
         repo: "https://github.com/dbdv/adviency_10",
         deploy: "https://lista-de-regalos-adviency-10.vercel.app/",

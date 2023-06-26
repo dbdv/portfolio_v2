@@ -35,7 +35,9 @@ export default function Card({
             {Boolean(deploy) && (
               <a href={deploy} target="_blank" className="card-link demo">
                 <span>Demo</span>
-                <RocketIcon className="rocket-icon" />
+                <span className="cover-rocket-animation">
+                  <RocketIcon className="rocket-icon" />
+                </span>
               </a>
             )}
           </div>
